@@ -184,7 +184,11 @@
 }
 
 .post-list-heading {
-  @include relative-font-size(1.75);
+  @include relative-font-size(1.9);
+
+  > a {
+    color: #111;
+  }
 }
 
 .post-list {
@@ -192,7 +196,13 @@
   list-style: none;
 
   > li {
+    padding-top: 15px;
     margin-bottom: $spacing-unit;
+    clear: both;
+  }
+
+  > li:first-child {
+    padding-top: 0;
   }
 }
 
@@ -251,4 +261,22 @@
       @include relative-font-size(1.125);
     }
   }
+}
+
+.categories {
+  font-size: 14px;
+  float: left;
+  padding: 2px 5px;
+  margin: 3px;
+  color: rgba(0,0,0,0.6);
+  background: #fcfcfc;
+}
+
+.categories:visited {
+  color: rgba(0,0,0,0.6);
+}
+
+.rss-subscribe {
+  padding-top: 30px;
+  clear: both;
 }
